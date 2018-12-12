@@ -38,6 +38,6 @@ questions:
   default: "testxip"
   description: "testxip"
   type: string
-  show_if: "ingress.hosts[0].name=!xip.io"
-  label: "only show up when ingress.hosts[0].name=!xip.io"
+  show_if: "ingress.hosts[0].name=xip.io"
+  label: "only show up when ingress.hosts[0].name=xip.io"
   group: "Services and Load Balancing"
