@@ -1,0 +1,43 @@
+questions:
+- variable: conditionort1
+  default: false
+  description: ""
+  label: Condition OR Test1
+  type: boolean
+  group: "testor"
+- variable: conditionort2
+  default: false
+  description: ""
+  label: Condition OR Test2
+  type: boolean
+  group: "testor"
+- variable: conditionshow
+  default: "show me"
+  description: ""
+  label: Condition Show with OR
+  type: string
+  show_if: "conditionort1=true||conditionort2=true"
+  group: "testor"
+
+#test ingress
+- variable: ingress.enabled
+  default: false
+  description: "Expose app using Layer 7 Load Balancer - ingress"
+  type: boolean
+  label: Expose app using Layer 7 Load Balancer
+  show_subquestion_if: true
+  group: "Services and Load Balancing"
+  subquestions:
+  - variable: ingress.hosts[0].name
+    default: "xip.io"
+    description: "Hostname to your Fluentd installation"
+    type: hostname
+    required: true
+    label: Hostname
+- variable: testxip
+  default: "testxip"
+  description: "testxip"
+  type: string
+  show_if: "ingress.hosts[0].name=!xip.io"
+  label: "only show up when ingress.hosts[0].name=!xip.io"
+  group: "Services and Load Balancing"
