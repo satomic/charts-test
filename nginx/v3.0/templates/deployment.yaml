@@ -55,5 +55,4 @@ spec:
     {{- end }}
       volumes:
       - name: data
-        persistentVolumeClaim:
-          claimName: {{ .Release.Name }}-local
+        emptyDir: {}
