@@ -47,4 +47,4 @@ tolerations: []
 
 affinity: {}
 
-test: 2.0x
+test: 2.2x
