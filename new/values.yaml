@@ -47,4 +47,4 @@ tolerations: []
 
 affinity: {}
 
-new: v3
+new: v4
