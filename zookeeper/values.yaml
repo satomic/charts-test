@@ -56,3 +56,4 @@ env:
   PURGE_INTERVAL: 24
 
 affinityEnabled: true
+test: x
