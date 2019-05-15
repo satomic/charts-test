@@ -47,4 +47,4 @@ tolerations: []
 
 affinity: {}
 
-test: xiaocaomei2.0
+test: xiaocaomei3.0
